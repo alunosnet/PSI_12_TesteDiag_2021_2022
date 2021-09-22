@@ -108,6 +108,7 @@ namespace _12H_TesteDiag_2021
             Aluno escolhido = (Aluno)lbAlunos.SelectedItem;
             if (escolhido != null)
                 escolhido.Entrada_Saida();
+            AtualizaLista();
         }
     }
 }
