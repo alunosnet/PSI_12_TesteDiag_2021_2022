@@ -29,6 +29,7 @@ namespace _12H_TesteDiag_2021
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tbNProcesso = new System.Windows.Forms.TextBox();
@@ -45,6 +46,12 @@ namespace _12H_TesteDiag_2021
             this.tbCampo2 = new System.Windows.Forms.TextBox();
             this.lbAlunos = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.detalhesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entradaSaídaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.cancelarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -174,6 +181,7 @@ namespace _12H_TesteDiag_2021
             // 
             // lbAlunos
             // 
+            this.lbAlunos.ContextMenuStrip = this.contextMenuStrip1;
             this.lbAlunos.FormattingEnabled = true;
             this.lbAlunos.Location = new System.Drawing.Point(81, 295);
             this.lbAlunos.Name = "lbAlunos";
@@ -189,6 +197,41 @@ namespace _12H_TesteDiag_2021
             this.button2.Text = "Remover";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.detalhesToolStripMenuItem,
+            this.entradaSaídaToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.cancelarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 98);
+            // 
+            // detalhesToolStripMenuItem
+            // 
+            this.detalhesToolStripMenuItem.Name = "detalhesToolStripMenuItem";
+            this.detalhesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.detalhesToolStripMenuItem.Text = "Detalhes";
+            this.detalhesToolStripMenuItem.Click += new System.EventHandler(this.detalhesToolStripMenuItem_Click);
+            // 
+            // entradaSaídaToolStripMenuItem
+            // 
+            this.entradaSaídaToolStripMenuItem.Name = "entradaSaídaToolStripMenuItem";
+            this.entradaSaídaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.entradaSaídaToolStripMenuItem.Text = "Entrada/Saída";
+            this.entradaSaídaToolStripMenuItem.Click += new System.EventHandler(this.entradaSaídaToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // cancelarToolStripMenuItem
+            // 
+            this.cancelarToolStripMenuItem.Name = "cancelarToolStripMenuItem";
+            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cancelarToolStripMenuItem.Text = "Cancelar";
             // 
             // FormAdmin
             // 
@@ -213,6 +256,7 @@ namespace _12H_TesteDiag_2021
             this.Controls.Add(this.button1);
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +280,10 @@ namespace _12H_TesteDiag_2021
         private System.Windows.Forms.TextBox tbCampo2;
         private System.Windows.Forms.ListBox lbAlunos;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem detalhesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem entradaSaídaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
     }
 }

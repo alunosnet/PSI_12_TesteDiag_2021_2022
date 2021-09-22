@@ -61,7 +61,7 @@ namespace _12H_TesteDiag_2021
             lbCampo1.Text = "Turma";
             lbCampo2.Text = "Ano Escolar";
         }
-        //profissional
+
         private void lbCampo1_Click(object sender, EventArgs e)
         {
 
@@ -82,7 +82,32 @@ namespace _12H_TesteDiag_2021
             }
             ListaAlunos.RemoveAt(posicao);
             AtualizaLista();
-            
+
+        }
+
+        private void detalhesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Aluno escolhido = DevolveAlunoEscolhido();
+            if(escolhido!=null) MessageBox.Show(escolhido.ToString());
+
+        }
+
+        private Aluno DevolveAlunoEscolhido()
+        {
+            Aluno escolhido = (Aluno)lbAlunos.SelectedItem;
+            if (escolhido == null)
+            {
+                MessageBox.Show("Selecione o aluno");
+                return null;
+            }
+            return escolhido;
+        }
+
+        private void entradaSaídaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Aluno escolhido = (Aluno)lbAlunos.SelectedItem;
+            if (escolhido != null)
+                escolhido.Entrada_Saida();
         }
     }
 }

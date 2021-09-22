@@ -22,7 +22,13 @@ namespace _12H_TesteDiag_2021
         }
         public override string ToString()
         {
-            return String.Format("{0} - {1}",Nprocesso,Nome);
+            return String.Format("{0} - {1} - {2}",
+                Nprocesso, Nome, (Estado ? "Na Escola" : "Fora da escola"));
+        }
+
+        internal void Entrada_Saida()
+        {
+            Estado = !Estado;
         }
     }
 }
